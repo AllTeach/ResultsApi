@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ResultsApi">
         <activity
+            android:name=".ActivityPickContact"
+            android:exported="true" />
+        <activity
             android:name=".PermissionActivity"
             android:exported="true" />
         <activity
