@@ -43,4 +43,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this,ActivityTakePicture.class);
         startActivity(intent);
     }
+
+    public void gotoPickContact(View view) {
+        Intent intent = new Intent(this,ActivityPickContact.class);
+        startActivity(intent);
+    }
 }

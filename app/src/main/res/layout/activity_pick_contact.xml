@@ -6,4 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".ActivityPickContact">
 
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="92dp"
+        android:text="Click to Select Contact"
+        android:onClick="launchForContact"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvContact"
+        android:layout_width="246dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="44dp"
+        android:text="Contact Details"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button6" />
 </androidx.constraintlayout.widget.ConstraintLayout>

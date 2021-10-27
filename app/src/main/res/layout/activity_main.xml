@@ -39,4 +39,16 @@
         android:onClick="gotoSelectFile"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button4" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="56dp"
+        android:text="Pick Contact Activity"
+        android:onClick="gotoPickContact"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
 </androidx.constraintlayout.widget.ConstraintLayout>
