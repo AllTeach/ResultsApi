@@ -10,6 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ResultsApi">
         <activity
+            android:name=".PermissionActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ActivityUsingCustomContract"
+            android:exported="true" />
+        <activity
+            android:name=".ActivitySelectImage"
+            android:exported="true" />
+        <activity
+            android:name=".ActivitySelectFile"
+            android:exported="true" />
+        <activity
+            android:name=".ActivityTakePicture"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
