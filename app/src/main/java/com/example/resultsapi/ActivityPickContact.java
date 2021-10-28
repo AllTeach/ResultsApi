@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.provider.OpenableColumns;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class ActivityPickContact extends AppCompatActivity {
@@ -52,20 +53,73 @@ public class ActivityPickContact extends AppCompatActivity {
          */
         returnCursor.moveToFirst();
         //get contact details
+     //   String contactId = returnCursor.getString(returnCursor.getColumnIndex(ContactsContract.Contacts._ID));
+   //     String contactName = returnCursor.getString(returnCursor.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
+
+    //    String idResults = returnCursor.getString(returnCursor.getColumnIndex(ContactsContract.Contacts.HAS_PHONE_NUMBER));
+    //    int idResultHold = Integer.parseInt(idResults);
+
         String contactId = returnCursor.getString(returnCursor.getColumnIndex(ContactsContract.Contacts._ID));
-        String contactName = returnCursor.getString(returnCursor.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
-
-        String idResults = returnCursor.getString(returnCursor.getColumnIndex(ContactsContract.Contacts.HAS_PHONE_NUMBER));
-        int idResultHold = Integer.parseInt(idResults);
-
-
 
         int nameColumnIndex = returnCursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME);
         String name = returnCursor.getString(nameColumnIndex);
 
+        String contactThumnail =returnCursor.getString(returnCursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.PHOTO_THUMBNAIL_URI));
+        //returnCursor.getString(returnCursor.getColumnIndex(ContactsContract.Contacts.PHOTO_THUMBNAIL_URI));
+
+        int hasNumber = Integer.valueOf(returnCursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.HAS_PHONE_NUMBER));
+        String number="";
+        //before setting image, check if have or not
+        ImageView imageView = findViewById(R.id.ivContact);
+        if (contactThumnail != null){
+            imageView.setImageURI(Uri.parse(contactThumnail));
+        }
+        else {
+            imageView.setImageResource(R.drawable.ic_launcher_background);
+        }
         returnCursor.close();
 
-        String retStr = "Contact Details: \nname: " + name + "\nnumber: " ;
+
+
+
+        // display first number only
+      //  String number="";
+       // if(hasNumber > 0) {
+         //   {
+           /*     Cursor cursor2 = getContentResolver().query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
+                        null,
+                        ContactsContract.CommonDataKinds.Phone.CONTACT_ID +" = "+contactId,
+                        null,
+                        null
+                );
+                while (cursor2.moveToNext()){
+                    //get phone number
+                    String contactNumber = cursor2.getString(cursor2.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
+                    //set details
+
+                    number+= "\nPhone: "+contactNumber;
+                    //before setting image, check if have or not
+                    ImageView imageView = findViewById(R.id.ivContact);
+
+                    if (contactThumnail != null){
+                        imageView.setImageURI(Uri.parse(contactThumnail));
+                    }
+                    else {
+                        imageView.setImageResource(R.drawable.ic_launcher_background);
+                    }
+                }
+                cursor2.close();
+
+
+
+
+            }
+*/
+
+
+
+
+        String retStr = "Contact Details: \nname: " + name + "\nnumber: " + number;
         return retStr;
 
     }
