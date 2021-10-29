@@ -37,7 +37,6 @@ public class ActivityPickContact extends AppCompatActivity {
     ActivityResultLauncher<Void> mGetContact;
 
     {
-    //    mGetContact = registerForActivityResult(new ActivityResultContracts.PickContact(), new ActivityResultCallback<Uri>() {
         mGetContact = registerForActivityResult(new CustomPicker(), new ActivityResultCallback<Uri>() {
             @Override
             public void onActivityResult(Uri result) {

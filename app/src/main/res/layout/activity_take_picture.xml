@@ -6,4 +6,46 @@
     android:layout_height="match_parent"
     tools:context=".ActivityTakePicture">
 
+    <ImageView
+        android:id="@+id/ivFullSize"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="40dp"
+        android:onClick="takeFullSizeImage"
+        android:src="@drawable/catt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivThumbnail"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="328dp"
+        android:onClick="takeStandardThumbnail"
+        android:src="@drawable/dog"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="288dp"
+        android:text="Click Image for Full Size Image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="92dp"
+        android:text="Click Image for Thumbnail only"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,3 +12,4 @@ public class ActivityUsingCustomContract extends AppCompatActivity {
         setContentView(R.layout.activity_using_custom_contract);
     }
 }
+
