@@ -8,10 +8,10 @@
 
     <ImageView
         android:id="@+id/ivFullSize"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="44dp"
         android:onClick="takeFullSizeImage"
         android:src="@drawable/catt"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,10 +19,10 @@
 
     <ImageView
         android:id="@+id/ivThumbnail"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="328dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="372dp"
         android:onClick="takeStandardThumbnail"
         android:src="@drawable/dog"
 
@@ -33,8 +33,8 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="288dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="16dp"
         android:text="Click Image for Full Size Image"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -43,9 +43,9 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="108dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="356dp"
         android:text="Click Image for Thumbnail only"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
