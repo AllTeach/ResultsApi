@@ -19,7 +19,7 @@ public class ResultActivity extends AppCompatActivity {
     public void returnData(View view) {
         Intent intent = getIntent();
 
-        EditText name = findViewById(R.id.etTextName);
+        EditText name = findViewById(R.id.etTextName);//
         EditText password = findViewById(R.id.etPassword);
 
         intent.putExtra("name",name.getText().toString());
