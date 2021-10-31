@@ -6,4 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".GenericResultActivity">
 
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="264dp"
+        android:onClick="gotoResultActivity"
+        android:text="Send To Result Activity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

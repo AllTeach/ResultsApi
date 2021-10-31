@@ -169,16 +169,18 @@ public class ActivityTakePicture extends AppCompatActivity {
         File image = null;
         File image2 = null;
 
-        try {
+       try {
             image = new File(storageDir,imageFileName + ".jpg");
+            /*
             image2 = File.createTempFile(
-                    imageFileName,  /* prefix */
-                    ".jpg",         /* suffix */
-                    storageDir      /* directory */
+                    imageFileName,
+                    ".jpg",
+                    storageDir
             );
-        } catch (IOException e) {
+*/
+        } catch (Exception e) {
             e.printStackTrace();
-        }
+       }
 
         // Save a file: path for use with ACTION_VIEW intents
         currentPhotoPath = image.getAbsolutePath();

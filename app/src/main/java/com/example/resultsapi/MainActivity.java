@@ -48,4 +48,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this,ActivityPickContact.class);
         startActivity(intent);
     }
+    public void gotoGenericResult(View view) {
+        Intent intent = new Intent(this,GenericResultActivity.class);
+        startActivity(intent);
+    }
 }
